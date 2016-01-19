@@ -32,19 +32,20 @@ console.log(playlistAudio);
 function Jukebox(song){
 	//method to play the song
 	//pass in the current loaded song with the argument
-	this.play = function(song){
-		song.play();
-		return "Song is now playing";
-	}
+	   this.play = function(song){
+		      song.play();
+		      return "Song is now playing";
+	   }
 	//method to pause the song
 	//pass in the current playing song with the argument
-	this.pause = function(song){
+    this.pause = function(song){
 		//use .pause to stop current song
-		song.pause();
-		return "Song is now paused.";
-	}
+		      song.pause();
+		      return "Song is now paused.";
+    }
 	//method to load a new song
 	//pass in the song to be loaded with the arugment
+
 	this.newSong = function(song){
 		currentSong = song.load();
 		return "Song is now loaded.";
@@ -60,6 +61,7 @@ var j = new Jukebox(audio);
 var newAudio = new Audio('mp3file/muse.mp3');
 
 window.onload = function(){
+
 	var playButton = document.getElementById("playButton");
 	playButton.onclick = function(){
 		j.play(audio)
