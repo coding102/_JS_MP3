@@ -1,25 +1,24 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Audio</title>
+        <meta charset="utf-8">
+        <title>tab title</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="index.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
     </head>
-  
-    <body>
-
+	
+		  <body>
         
-    <script>
+    <input type="button" value="Play"  onclick="play()">
+        <audio id="audio" src="mp3file/classical.mp3" ></audio>
         
-        function play(){
-            var audio = document.getElementById("audio");
-            audio.play();
-        }
-        
-        
-    </script>
-
-        <input type="button" value="PLAY"  onclick="play()">
+        <input type="button" value="Pause"  onclick="pause()">
         <audio id="audio" src="mp3file/classical.mp3" ></audio>
     
-    
     </body>
- </html>
+    	
+</html>
+
+
+
