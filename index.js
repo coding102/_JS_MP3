@@ -50,13 +50,25 @@ var newAudio = new Audio('mp3file/muse.mp3');
 
 window.onload = function(){
 	var playButton = document.getElementById("playButton");
-		playButton.addEventListener("click", j.play(audio));
-
+	playButton.onclick = function(){
+		j.play(audio)
+	};
+	
 	var pauseButton = document.getElementById("pauseButton");
-		pauseButton.addEventListener("click", j.pause(audio));
+	pauseButton.onclick = function(){
+		j.pause(audio)
+	};
 
 	var newSongButton = document.getElementById("loadButton");
-		newSongButton.addEventListener("click", j.newSong(newAudio));
+	newSongButton.onclick = function(){
+		j.newSong(newAudio)
+	};
+
+	// var pauseButton = document.getElementById("pauseButton");
+	// 	pauseButton.addEventListener("click", j.pause(audio));
+
+	// var newSongButton = document.getElementById("loadButton");
+	// 	newSongButton.addEventListener("click", j.newSong(newAudio));
 
 // when button clicked: j.play(currnet song)
 };
