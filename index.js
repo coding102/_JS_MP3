@@ -1,8 +1,15 @@
 
+
+var playlist = new Array('mp3file/classical.mp3', 'mp3file/newborn.mp3', 'mp3file/watchtower.mp3', 'mp3file/muse.mp3');
+
 var hysteria = new Audio('mp3file/muse.mp3')
 var classical = new Audio('mp3file/classical.mp3')
 
+//<button onclick="document.getElementById('song1').play()">Song 1</button><br />
+//<button onclick="document.getElementById('song2').play()">Sound </button><br />
+
 //this is the object jukebox which has methods to play, stop and load a new song
+
 function Jukebox(song){
 	//method to play the song
 	this.play = function(song){
