@@ -17,7 +17,9 @@ function Jukebox(song){
 	}
 	//method to pause the song
 	this.pause = function(){
-		return "Song is now paused"
+		var audio = document.getElementById("audio");
+		audio.addEventListener("click", pause();)
+		return "Song is now paused."
 	}
 	//method to load a new song
 	this.load = function(){
