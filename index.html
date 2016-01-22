@@ -2,71 +2,37 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>tab title</title>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
+        <title>Jukebox</title>
         <script src="index.js"></script>
+        <link rel="stylesheet" type="text/css" href="icons/simple-line-icons.css">
         <link href="css/main.css" rel="stylesheet"/>
+        <link href='https://fonts.googleapis.com/css?family=Cinzel:400,700' rel='stylesheet' type='text/css'>
     </head>
-		  <body>
-        
-        <!--  Kai Waddington-http://codepen.io/waddington/pen/sjpeA "equalizer.scss" -->
-        
-            <div class="col-sm-12">
-                <div class='wrapper'>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                </div>
+
+	<body>
+        <div class="container">
+            <h1>KASAKDE AUTOMATIC</h1>
+            <!-- music control buttons -->
+            <div class="control-buttons">
+                <!-- each span class references a line icon in the icons folder css file -->
+               <span id="backButton"><span class="icon-arrow-left"></span></span>
             </div>
-        
-        
-        <div class="row">
-            <div class="col-sm-2">
-                <button id="shuffleButton"><img src="images/next.png"></button>
-                <p>shuffle</p>
+            <div class="control-buttons">
+                <span id="playButton"><span class="icon-control-play"></span></span>
             </div>
-            <div class="col-sm-2">
-                <button id="backButton"><img src="images/next.png"></button>
-                <p>Back</p>
+            <div class="control-buttons">
+                <span id="pauseButton"><span class="icon-control-pause"></span></span>
+            </div>
+            <div class="control-buttons">
+                <span id="loadButton"><span class="icon-playlist"></span></span>
+            </div>
+            <div class="control-buttons">
+                <span id="shuffleButton"><span class="icon-shuffle"></span></span>
+            </div>
+            <div class="control-buttons">
+                <span id="nextButton"><span class="icon-arrow-right"></span></span>
             </div>
 
-            <div class="col-sm-2">
-                <button id="playButton"><img src="images/play.png"> </button>
-            </div>
-            
-            <div class="col-sm-2">
-                <button id="pauseButton"><img src="images/pause.png"></button>
-            </div>
-            
-            <div class="col-sm-2">
-                <button id="loadButton"><img src="images/next.png"> </button>
-                <p>load</p>
-            </div>
-
-            <div class="col-sm-2">
-                <button id="nextButton"><img src="images/next.png"> </button>
-                <p>next</p>
-            </div>
 
         </div>
 

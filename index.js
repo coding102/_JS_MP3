@@ -21,10 +21,8 @@ console.log(playlistAudio);
 //this is the object jukebox which has methods to play, stop and load a new song
 //pass in the playlist you would like to load
 function Jukebox(playlist){
-	console.log(playlist);
 	//check the length of the playlist
 	playListLength = playlist.length;
-	console.log(playListLength)
 	//initialize the currentSong to the first one in the playlist
 	currentSong = playlist[0]
 	//method to play the song
@@ -50,10 +48,8 @@ function Jukebox(playlist){
 		currentSong.pause();
 		//increment the song counter by one
 		songCounter = songCounter + 1;
-		console.log(songCounter);
 		//set the current song to the next song in the the playlist array via songCounter
 		currentSong = playlist[songCounter];
-		console.log(playlist[songCounter]);
 		//play the song once it gets to the next song so
 		//the user does not have to hit the play button again
 		currentSong.play();
@@ -62,8 +58,6 @@ function Jukebox(playlist){
 	    };
 
     this.back = function() {
-    	//songCounter at start of back
-    	console.log(songCounter)
     	//pause the current song
     	currentSong.pause();
     	//subtract 1 from the songCounter to go back 1 song
@@ -82,11 +76,7 @@ function Jukebox(playlist){
 		//return song counter for use in other methods
 		songCounter;
     };
-	//method to load a new playlist
-	//pass in the song to be loaded with the arugment
-	this.newPlaylist = function(){
-		currentSong = song.load();
-	};
+
 	//method to shuffle to a random song in the playlist
 	this.shuffle = function(){
 		currentSong.pause();
@@ -94,7 +84,6 @@ function Jukebox(playlist){
 		songCounter = (Math.round((Math.random() * 9)));
 		//set the currentSong to the corresponding place in the playlist array
 		currentSong = playlist[songCounter];
-		console.log(currentSong);
 		//play the newly set song
 		currentSong.play();
 		//return song counter for use in other methods

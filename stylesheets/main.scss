@@ -1,37 +1,97 @@
-@import 'body';
-@import 'equalizer';
+$background-color: #FFC76B;
+$button-color: #CE0025;
+$text-color: #FF5F00;
+$alternate-text-color: #F93B5D;
+
+%controls-style {
+    color: $button-color;
+    font-size: 50px;
+    transition: all .5s;
+    display: inline-block;
+    margin: 50px;
+}
+
+%controls-style-hover {
+    color: $button-color;
+    font-size: 50px;
+    color: $alternate-text-color;
+    transition: all .5s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    width: 100%;
-    height: 100%;
+    font-family: 'Cinzel', serif;
+    background-color: $background-color;
 }
 
-.row { 
-    position: fixed;
-    bottom: 5px;
-    width: 100%;
-    button {
-        background: none;
-        border-style: none; 
+.container {
+
+text-align: center;
+
+    h1  {
+        margin: 25px;
+        font-size: 500%;
+        color: $text-color;
     }
-    #playButton {
-        margin-left: 35%;
+    .control-buttons {
+        display: inline-block;
+
+        .icon-arrow-left {
+            @extend %controls-style;
+        }
+
+        .icon-control-play {
+            @extend %controls-style;
+        }
+
+        .icon-control-pause {
+            @extend %controls-style;
+        }
+
+        .icon-playlist {
+            @extend %controls-style;
+        }
+
+        .icon-shuffle {
+            @extend %controls-style;
+        }
+
+        .icon-arrow-right {
+            @extend %controls-style;
+        }
+
+        .icon-arrow-left:hover {
+            @extend %controls-style-hover;
+        }
+
+        .icon-control-play:hover {
+            @extend %controls-style-hover;
+        }
+
+        .icon-control-pause:hover {
+            @extend %controls-style-hover;
+        }
+
+        .icon-playlist:hover {
+            @extend %controls-style-hover;
+        }
+
+        .icon-shuffle:hover {
+            @extend %controls-style-hover;
+        }
+
+        .icon-arrow-right:hover {
+            @extend %controls-style-hover;
+        }
     }
-    #pauseButton {
-        margin-left: 35%;
-    }
-    #loadButton {
-        margin-left: 35%;
-    }
-    button{
-        background: none;
-        border-style: none; 
-    }
-    h1 {    
-        color: black;
-    }  
-    
-    h3 {     
-        color: blue;
-    } 
 }
+
+
+
