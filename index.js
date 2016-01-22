@@ -26,6 +26,17 @@ for (x in playlist) {
 //this is the object jukebox which has methods to play, stop and load a new song
 //pass in the playlist you would like to load
 function Jukebox(playlist){
+	console.log(playlist);
+	console.log(playlist[2].src);
+	console.log("hello");
+
+	//this will be a method to display the current track
+	function trackTitle(){
+		//set file source to song name
+		songName = playlist[currentSong].src
+		//remove the file name formatting leaving just the song name
+	};
+
 	//check the length of the playlist
 	playListLength = playlist.length;
 	//initialize the currentSong to the first one in the playlist
