@@ -65,6 +65,10 @@ function Jukebox(song){
 	}
 };
 
+//create a song object
+
+//then create the playlist object
+
 var j = new Jukebox(audio);
 //don't create a new jukebox every time song is loaded
 //on start up, intitalize jukebox by looping through an array of song choices
