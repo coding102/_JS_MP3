@@ -87,6 +87,19 @@ function Jukebox(playlist){
 	this.newPlaylist = function(){
 		currentSong = song.load();
 	};
+	//method to shuffle to a random song in the playlist
+	this.shuffle = function(){
+		currentSong.pause();
+		//generate a random number and set it to the songCounter var
+		songCounter = (Math.round((Math.random() * 9)));
+		//set the currentSong to the corresponding place in the playlist array
+		currentSong = playlist[songCounter];
+		console.log(currentSong);
+		//play the newly set song
+		currentSong.play();
+		//return song counter for use in other methods
+		songCounter;
+	};
 
 };
 
@@ -96,6 +109,11 @@ var j = new Jukebox(playlistAudio);
 //don't create a new jukebox every time song is loaded
 //on start up, intitalize jukebox by looping through an array of song choices
 //so that they are all loaded into the jukebox
+	var shuffleButton = document.getElementById("shuffleButton");
+	shuffleButton.onclick = function(){
+		j.shuffle();
+	};
+
 	var backButton = document.getElementById("backButton");
 	backButton.onclick = function(){
 		j.back();
