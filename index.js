@@ -1,8 +1,16 @@
+//JS Jukebox by Richard and Mark
+//to do:
+//make an array of 50 songs, then real array of 10 songs, pick 4 random songs, if correct is picked, increment points.
+//make a playlist object to more easily manage the playlists
+//then the user selects which playlist they want
+
 window.onload = function(){
-//set the playlist array of original mp3 files
+//set the first playlist array of original mp3 files
 var playlist = ['mp3file/breakingUp.mp3', 'mp3file/dayTrippin.mp3', 'mp3file/disarmYou.mp3', 'mp3file/neverSleepAlone.mp3', 'mp3file/phoenix.mp3', 'mp3file/promise.mp3', 'mp3file/tearDownTheseWalls.mp3', 'mp3file/weDontStop.mp3', 'mp3file/whatever.mp3', 'mp3file/whereAreYouNow.mp3'];
+var playlist2 = []
 //create an empty array to push the JS created audio files into
 var playlistAudio = [];
+var playlistAudio2 = [];
 //set x to zero for use in the for in loop
 x = 0;
 //loop through the playlist of music files
@@ -14,9 +22,6 @@ for (x in playlist) {
 	//increment x by one to move onto the next index of the array
 	x++;
 };
-
-//list the audio element array in console to check if it's working
-console.log(playlistAudio);
 
 //this is the object jukebox which has methods to play, stop and load a new song
 //pass in the playlist you would like to load
@@ -50,6 +55,8 @@ function Jukebox(playlist){
 		songCounter = songCounter + 1;
 		//set the current song to the next song in the the playlist array via songCounter
 		currentSong = playlist[songCounter];
+		//re-load current song so it doesn't start playing in the middle
+		currentSong.load()
 		//play the song once it gets to the next song so
 		//the user does not have to hit the play button again
 		currentSong.play();
@@ -69,8 +76,8 @@ function Jukebox(playlist){
     	};
     	//set the currentSong to the corresponding place in the playlist array
     	currentSong = playlist[songCounter];
-    	//logging to check
-		console.log(playlist[songCounter]);
+    	//re-load current song so it doesn't start playing in the middle
+		currentSong.load()
 		//play the newly set song
 		currentSong.play();
 		//return song counter for use in other methods
@@ -84,6 +91,8 @@ function Jukebox(playlist){
 		songCounter = (Math.round((Math.random() * 9)));
 		//set the currentSong to the corresponding place in the playlist array
 		currentSong = playlist[songCounter];
+		//re-load current song so it doesn't start playing in the middle
+		currentSong.load()
 		//play the newly set song
 		currentSong.play();
 		//return song counter for use in other methods
@@ -95,9 +104,8 @@ function Jukebox(playlist){
 
 //create the jukebox object and pass in the current playlist
 var j = new Jukebox(playlistAudio);
-//don't create a new jukebox every time song is loaded
-//on start up, intitalize jukebox by looping through an array of song choices
-//so that they are all loaded into the jukebox
+
+//these are the button actions calling the Jukebox methods
 	var shuffleButton = document.getElementById("shuffleButton");
 	shuffleButton.onclick = function(){
 		j.shuffle();
@@ -122,10 +130,4 @@ var j = new Jukebox(playlistAudio);
 		j.pause();
 	};
 };
-
-//make an array of 50 songs, then real array of 10 songs, pick 4 random songs, if correct is picked, increment points.
-
-
-
-
 
