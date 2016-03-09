@@ -1,16 +1,8 @@
 #JavaScript JukeBox
-* Display at least one song on the page when the page loads
-
-* Give the user the ability to play that song, without using the "built-in" play button. This could be through a different button, through clicking or mousing over an image on the page, or any other device of your choosing.
-
-* Give the user the ability to stop that song without using the "built-in" stop button. Once again, this could be through a different button, through clicking or mousing over an image on the page, or any other device of your choosing.
-
-* Give the user the ability to load at least one different song into the Jukebox besides the one that is loaded when the page initially renders
-
-* The whole Jukebox should be backed by an object called Jukebox with methods to play, stop, and load songs.
+* Object-oriented JavaScript jukebox
+* Plays a list of song's from Kaskade's Automatic album
+* Has simple, easy to use interface where the user can play, stop, next, back, and shuffle
 
 ##Possible Additional Features
-
-* Playlist of songs, allows the user to queue up the next song
-
-* Feature to request a random song
+* Load a different playlist based on pre-loaded selection
+* Timed game where user guesses which song is playing
